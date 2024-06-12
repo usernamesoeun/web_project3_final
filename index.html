@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 300, 400, 800;
+    font-style: normal;}
+
+	html{font-family:Pretendard-Regular ;scroll-behavior: smooth;}
+			html{line-height: 1.5; color: #346341;}
+
+			body{; margin: 0}
+
+		.flex{display: flex; flex-wrap:wrap; padding: 10px 0px; gap: 0%}
+		.flex div {overflow: hidden;}
+		.flex h2{ width: 33%; border: 1px solid black; }
+		.flex div h2{font-size: 14px}
+		.flex div img{display: block;}
+		.flex p{top: 0; left: 0; right: 0}
+			.menu {width: 800px; margin: auto;}
+			.menu li{list-style-type: none;margin-left: auto; margin-right: auto;}
+			.menu li a{display: block; padding: 10px 20px;
+			        text-decoration: none; color: white; gap: 30%}
+			.menu li a:hover{background: white;
+			                color:#346341; border-radius: 30px}
+			.logo{padding-bottom: 40px; padding-top: 30px; padding-right: 500px; padding-left: 60px; font-size: 1.2rem}
+
+	nav{background-color:rgb(178,185,178); color: white; position: fixed; z-index: 1000;}
+	footer{background-color: #346341; text-align: center; color: white; padding: 100px}
+
+	h1, h2, p {margin-left: 40px}
+	h1{font-size: 1.5rem}
+	h2{font-size: 1.3rem}
+	h3{font-size: 1.9rem; text-align: center;padding-top: 100px; padding-bottom: 100px; font-weight: bold;}
+	p{font-size: 1.1rem; padding-bottom: 50px;}
+
+	img{overflow: hidden;margin: 40px}
+	section{padding-bottom: 80px}
+
+	h1{background-color: #BAD2C0; padding: 30px; width: 40%;}
+
+
+
+
+
+.blur-to-clear-image {
+    width: 300px;
+    height: auto;
+    animation: blurToClearAnimation 3s forwards;
+	position: back;}
+
+/* 애니메이션 정의 */
+@keyframes blurToClearAnimation {0% {filter: blur(10px);}
+    100% {filter: blur(0px);}}
+
+
+.diagram {position: relative;
+          width: 500px;
+          height: 300px;}
+        .center {
+            background-color: #6b886b; color: #fff;
+            padding: 20px; border-radius: 50%;
+            text-align: center;
+            width: 120px; height: 60px;
+            display: flex; justify-content: center;
+            align-items: center; position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%); 
+        	z-index: 1}
+
+        .item {position: absolute;
+            width: 1000px;
+            text-align: left;
+            font-size: 1em;
+        	margin-left: 300px}
+
+        .item1 { top: 5%;
+            left: 90%;}
+
+        .item2 { top: 50%;
+            left: 90%;
+            transform: translateY(-50%);}
+
+        .item3 {bottom: 5%;
+            left: 90%;}
+
+        .line {border-top: 1px dotted #000;
+            width: 100px;
+            position: absolute;
+            top: 50%;
+            right: 25%;
+            transform: translateY(-50%);}
+
+
+	.line1 {position: absolute;
+	width: 500px;
+	height: 0px;
+	left: 45%;
+	top: 30%;
+	border: 1px dashed #346341;
+	transform: rotate(-15deg);
+	z-index: 0}
+
+	.line2{position: absolute;
+	width: 500px;
+	height: 0px;
+	left: 45%;
+	top: 50%;
+	border: 1px dashed #758E7B;
+	z-index: 0}
+
+	.line3{position: absolute;
+	width: 500px;
+	height: 0px;
+	left: 45%;
+	top: 70%;
+	border: 1px dashed #346341;
+	transform: rotate(15deg);
+	z-index: 0}
+
+
+.back1{background: #F3F3E8;
+		padding-top: 80px; padding-bottom: 100px}
+.back2{background-color: #F3F3E8; padding-bottom: 100px}
+
+.colum{column-count: 2;column-gap: 39px;}
+
+.centerspacing{text-align: center;padding-top: 50px}
+
+.container {max-width: 800px;
+            margin: 0 auto;
+            padding:;}
+
+        .step {margin-bottom: 20px;}
+
+        .step h2 {background-color: #e8f4e8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;}
+
+        .step p {margin-left: 20px;}
+
+        .note {font-size: 0.9em;
+            color: #555;
+            margin-left: 20px;}
+
+ .arrow {width: 1px; 
+         height: 30px; 
+         border-left: 10px solid transparent;
+         border-right: 10px solid transparent;
+         border-top: 10px solid #6b886b;
+         margin: 0 auto;
+         margin-bottom: 20px;}
+
+.container2{display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width:;
+            margin:0px;}
+
+        .container img {width: 100%;
+            height: auto;
+            display: block; margin: 0px}
+
+.text-overlay {position: absolute;
+			top: 35%;
+            left: 50%;
+            transform: translate(-10%, -50%);
+            color: #346341;
+            font-size: 4rem;
+            font-weight: bold;
+            /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
+            pointer-events: none; /* 텍스트가 클릭되지 않도록 */
+        	width: 1000px; }
+
+   .text-slide {position: absolute;
+            left: -100%; /* 초기 위치를 왼쪽으로 설정 */
+            top: 35%;
+            transform: translateY(-10%, -50%);
+            white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
+            animation: slideIn 2s forwards; /* 애니메이션 적용 */}
+        @keyframes slideIn {
+            to { left: 50%; /* 최종 위치를 왼쪽으로 설정 */}}
+
+    .blinking-text { animation: blink-animation 1s steps(5, start) infinite;
+            color:#346341;}
+
+        @keyframes blink-animation {
+            to {visibility: hidden;}}
+
+    .line2-2{position: absolute;
+	width: 1100px;
+	height: 0px;
+	left: 45%;
+	top: 50%;
+	border: 1px dashed #758E7B;
+	z-index: 0}
+
+ .circle {display: inline-block;
+            width: 30px; /* 원의 너비 */
+            height: 30px; /* 원의 높이 */
+            border-radius: 50%; /* 원형으로 만들기 위해 반지름을 50%로 설정 */
+            background-color: #346341; /* 배경색 */
+            color: white; /* 글자색 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            line-height: 30px; /* 요소의 높이와 동일하게 설정하여 수직 가운데 정렬 */
+            font-size: 20px; /* 글자 크기 */
+            font-weight: bold; /* 글자 굵기 */
+            margin: 5px; /* 요소 간의 간격 */}
+    .img{width: 150px}
+
+    .textbox{background-color: white; text-align: center; padding: 20px; max-width: 1000px; margin: auto}
+
+</style>
+
+
+
+	<title>우리 집 땅에서 문화재가 나온다면?!</title>
+</head>
+
+	<nav>
+        <div class="wrap flex">
+                <div class="logo">우리 집 땅에서 <strong>문화재</strong>가 나온다면</div>
+                <ul class="menu flex">
+                        <li><a href="#a">처음으로</a></li>
+                        <li><a href="#b">매장문화재</a></li>
+                        <li><a href="#c">신고절차</a></li>
+                        <li><a href="#d">문제점</a></li>
+                        <li><a href="#e">끝으로</a></li>
+                </ul>
+        </div>
+	</nav>
+
+<header id="a">
+	<div class="blur-to-clear-image">
+		<div class="text-slide">
+		<div class="text-overlay">우리집 땅에서 <br>문화재가 나온다면</div>
+	</div>
+	<img src="header.jpg">
+
+</div>
+</header>
+
+<body>
+<section>
+	<div class="back2">
+	<div class="container2">
+		<img src="cut1.jpg">
+		<img src="cut2.jpg">
+		<p class="textbox">안녕하세요! 저는 방학을 맞아 할아버지 댁으로 놀러간 중학생니다</p>
+		<p class="textbox">그런데 농사를 짖다 땅에서 이상한 도자기를 발견했지 뭐에요</p>
+	</div>
+		<img src="cut3.jpg">
+		<p class="textbox">딱 봐도 심상치 않아보이는 유물처럼 보이길래 분명 큰 보상금을 받을 수 있을거라 기대하고 어른들께 알렸습니다</p>
+		<img src="cut4.jpg">
+		<p class="textbox">하지만 집안에서는 유물을 다시 조용히 덮자, 그래도 신고하자 말이 나오는 상황인데 이게 어떻게 된 일 일까요?</p>
+	</div>
+</div>
+</section>
+
+<section id="b">
+	<h1>매장문화재(매장 유산)이란?</h1>
+	<h2>매장 문화재(매장 유산)</h2>
+	<p>땅 속이나 바다 밑에 묻혀 있는 문화유산으로, 고고학에서는 유물,유구, 유적을 매장유산으로 구분하고 있습니다.
+	</p>
+</section>
+<section>
+	<div class="diagram">
+        <div class="center">매장 문화재</div>
+        <div class="item item1"><strong>유물</strong><br>토기, 석기 등의 출토물</div>
+        <div class="item item2"><strong>유구</strong><br>집터, 고분, 건물터 등 옛 구조물 하나 하나</div>
+        <div class="item item3"><strong>유적</strong><br>마을터, 절터 등 유구들이 모인 장소</div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>   
+  </section>
+
+  <section>
+  	<div class="back1">
+  		<h2>매장 유산의 조사</h2>
+  		<p>매장 문화재의 조사는 지표조사와 발굴조사를 통해 진행됩니다.</p>
+
+  		<div class="colum">
+
+  		<h2><div class="circle">A</div>지표조사</h2>
+	  		<p>땅을 파지 않고 문헌, 학계의 연구결과 및 땅 위에 흩어져 있는 토기, 자기, 기와 조각 등의 자료들을<br> 근거로 땅속에 묻혀 있는 유적을 추정해 내는 조사로 유적이 어느 정도의 범위에 분포하고 있을지 등<Br> 대략적인 정보를 파악할 수 있음</p>
+	  		
+	  		<h2><div class="circle">B</div>발굴조사</h2>
+	  		<p>땅 속에 있는 매장 유물을 과학적인 방법으로 드러내는 것으로, 유적의 정확한 범위와 성격,<Br> 시대 등 지표조사 보다 정확한 정보를 얻기 위해 진행
+	  		</p>
+  		</div>
+  	</div>
+  </section> 
+  		
+  <section>
+		<h1>대표적인 매장 문화재 발굴사례_백제금동대향로</h1>
+
+		<div class="colum">
+			<section>
+  		<p>대표적인 매장 문화재의 발굴 사례로는 우리 모두가 익히 알고 있는 백제금동대향로가 있습니다. <br>
+  		백제금동대향로는 백제에서 만들어진 금동제 박산로로, 1993년 12월 12일 충청남도 부여군 <br>능산리 절터의 목곽 수로 안에서 발견되어 국보 제 287호로 지정되었습니다.</p>
+  		<img src="img2.png">
+  		</section>
+
+  		<section>
+  		<img src="img1.png">
+
+  		<p>백제금동대향로는 주차장 건설 중 공사가 임박한 시점에서 발견되었습니다. 발견 당시<br> 백제금동대향로는 진흙 속에 있었고, 바닥에서 기와 조각과 토기 조각, 주변에서<Br> 섬유조각이 발굴되었으며, 대향로가 오랜 세월 완벽하게 보존될 수 있었던 이유가<br> 진흙에 잠긴 진공 상태에 보관되었기 때문이라 보고 있습니다.</p>
+  		</section>
+  		
+  		</div>
+  </section>   
+
+
+ <section>
+  	<div class="back1">
+  		<h2>사선으로 자른듯한 이 아파트, 보신 적 있나요?</h2>
+  		<div class="colum">
+
+  		<img src="img3.png">
+  		<p>서울 송파구 풍납동에 위치한 이 아파트는, 풍납동이 1997년 백제 유물이 대거 발굴되며 대부분<br> 문화재보호구역으로 묶이며, 풍납토성 경관을 보호한다는 취지로 상단부가위로 자른 듯한 사선<br> 형태를 띠고 있습니다.</p>
+		
+
+  		<img src="img4.png">
+  		<p>김포 장릉(왕릉) 인근에서 한 건설사가 ‘왕릉 뷰’ 아파트 건설을 강행해 논란이 되었으며,<br> 현재 문화재보호구역에 속한 문제로 공사를 중단했습니다. <br>
+  		아파트 입주를 코앞에 둔 건설사와 입주자들은 “죽은 왕이 산 사람보다 우선이냐”며 반발합니다.<br> 반대로 세계문화유산인 장릉의 가치를 훼손한다며 아파트를 철거하라는 이들도 있습니다.</p>
+  		</div>
+
+  		<div class="centerspacing">
+  		<p>이렇듯 문화재가 발견되어 인근 땅이 보호구역으로 지정되거나, 문화재가 나올 경우 많은 문제가 발생할 수 있는데요,</p>
+  		<p>만약 내 땅이나 건설중인 아파트에서 문화재가 발견되어 신고하지 않고 다시 몰래 묻는 건 괜찮을까요?</p>
+  		</div>
+	</div>
+  </section>
+
+  <section>
+  	<div class="blinking-text">
+  		<h3>답은 NO!</h3>
+  	</div>
+  </section>
+
+  <section id="c">
+  		<h1>매장문화재의 신고 의무와 절차</h1>
+
+  		<div class="colum">
+
+	  		<P>매장 문화재를 발견한 때에는 매장문화재법 제 17조(발견신고 등)에 따라 발견자나 매장문화재 유존지역의 소유자, 점유자 또는 관리자는7일 이내에 ‘그 현상을 변경하지 말고’ 매장문화재가 발견된 장소를 관할하는 시, 군, 구 및 제주특별자치도, 경찰서 등에 신고해야 합니다.</P>
+	  		<br>
+	  		<P>만약 매장 문화재를 발견한 수 신고하지 아니하고 은닉 또는 처분하거나 현상을 변경한 자는 매장문화재 보호 및 조사에 관한 법률 제 31조 제 6항에 따라 처벌됩니다.</P>
+	  		<P class="note">*제 31조(도굴 등의 죄)<br>
+			6항: 제 17조를 위반하여 매장 문화재를 발견한 후 이를 신고하지 아니하고 은닉 또는 처분하거나 현상을 변경한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.</P>
+		</div>
+  </section>
+
+  <section>
+  	<div class="diagram">
+  		<div class="line2-2">
+        <div class="center">매장 문화재 신고 절차</div>
+    </div>
+    	</div>
+    </div>
+
+     <div class="container">
+     	<div class="centerspacing">
+        <div class="step">
+            <h2>7일 이내 신고</h2>
+	            <p>신고: 발견자는 매장문화재를 발견한 날로부터 7일 이내 방문 또는 전화 등의 연락수단을 통하여 발견 사실을 신고, 매장문화재 발견된 장소를 관할하는 시·군 및 제주특별자치도 문화재 담당부서, 경찰서 등에 발견사실을 신고하고 발견된 매장 문화재를 인계</p>
+        </div>
+        <div class="arrow"></div>
+
+        <div class="step">
+            <h2>접수</h2>
+	            <p>접수: 발견신고를 접수받은 기관은 1. 매장문화재 발견 신고서 사본,<br> 2. 발견 신고된 매장문화재의 사진 등의 구비서류를 첨부하여 문화재청에 그 사실을 통보</p>
+        </div>
+        <div class="arrow"></div>       
+
+        <div class="step">
+            <h2>공고&강장</h2>
+	            <p>공고&강장: 관련 경찰서장 또는 지자체장관은 설치한 제주특별자치도지사는 유실물법에 따라 공고,<br> 국립문화재연구원과 국립해양문화재연구소는 문화재 예우강장</p>
+        </div>
+        <div class="arrow"></div>
+
+        <div class="step">
+            <h2>국가 귀속</h2>
+	            <p>국가 귀속: 정당한 소유자가 없을 시 국가에서 직접 보호할 필요가 있는 문화재는 국가귀속하거나 교육 및<br> 학술자료 등으로 보관, 활용</p>
+        </div>
+        <div class="arrow"></div>
+
+        <div class="step">
+            <h2>보상, 포상금</h2>
+	            <p>보상, 포상금: 발견신고 매장문화재가 국가귀속된 경우 보상금을 지급하며,<br> 보상금은 문화재위원회의 심의를 거쳐 결정</p>
+	            <p class="note">(*보상 및 포상금 지급에 관한 법률 제3조 제1항에 따른 유실물법, 매장문화재 보호 및 관련 법령 제7조제1항에 따라<br> 발견신고 기간을 준수한 경우에 한함)</p>
+	            <p class="note">발견신고를 발굴조사 원인으로 매장한 경우 발굴된 문화재 가액 등을 고려하여 포상금을 지급할 수 있음</p>
+	            <p class="note">(*포상금액 최고 1억원)</p>
+	        </div>
+        </div>
+    </div>
+<
+  </section>
+
+  <section id="d">
+  		<h1>매장문화재 신고에 따른 문제점?</h1>
+
+  		<div class="colum">
+
+	  		<h2><div class="circle">1</div>지표조사 비용 전가</h2>
+	  		<p>
+			그동안 3만 제곱미터 이상의 대형 공사현장은 시행자가 지표조사 비용을 모두 부담했습니다. 3만 제곱미터 미만의 공사 현장만 정부가 지원이 나왔습니다. 하지만 문화재가 발견되면 공사 지연으로 공사비가 늘어나는 상황에서 조사비용까지 부담시키는 제도를 두고 불만이 상당했습니다.
+			</P>
+
+  			<h2><div class="circle">2</div>발굴 비용</h2>
+  			<p>
+			매장문화재 보호법 제11조제 3항에서는 매장문화재 발굴조사비용의 ‘원인자 부담원칙’을 정하고<br> 있습니다. 그럼에도 같은 법 시행령 제10조 등에서는 소규모 발굴조사에 소요되는 경비를 국가가<Br> 지원하도록 규정하고 있어서 현재는 건축물의 대지 면적이 792제곱미터 이하인 건설공사만<br> 발굴비용이 지원되고 있는 실정입니다. 이에 국가의 발굴비용 지원이 확대돼야 한다는 주장도<br> 나왔습니다.
+			</P>
+		  		
+		</div>
+  </section>
+
+  <section>
+  <div class="back1">
+  		<h2>cf) 다른 나라의 경우 매장문화재를 발견하면 어떻게 할까?</h2>
+  		<h2>해외 매장문화재 발굴조사 정부 지원 현황</h2>
+  		<div class="colum">
+  			<img src="usa.png" class="img">
+  		<h2>미국</h2>
+	  		<p>사업 시행자는 발굴조사 수행에 있어 합리적 수준의 일부 경비 부담.<br> 그 외 비용은 연방정부 및 주정부에서 운영하는 역사보존기금을 활용</p>
+	  		<img src="japan.png">
+  		<h2>일본</h2>
+	  		<p>지표 및 시굴조사: 전액 국가 지원<br>
+	  		정밀발굴조사: 비영리사업-전액 국가 지원, 영리 사업-사업시행자</p>
+	  		<img src="france.png" class="img">
+  		<h2>프랑스</h2> 
+	  		<p>사업 시행자는 예방고고학 부가세와 발굴조사의 직접경비 부담.<br> 직접경비 이외 비용은 예방고고학 기금을 재원으로 지원</p>
+	  		<img src="china.png">
+  		<h2>중국</h2>
+	  		<p>전액 정부 예산 지원</p>
+  		</div>
+  	</div>
+	</section>
+
+	<section id="e">
+		<h1>현재 매장문화재 관련 정책과 법 개정은 있을까</h1>
+
+	<div class="colum">
+  		<P>24년 1월 25일, ‘매장문화재 보호 및 조사에 관한 법률’개정안이 통과하였습니다.
+  			<br>
+  			<br>
+		문화재청은 기존에는 발굴조사로 건설공사가 완전히 무산된 경우에만 국가와 지자체가 그 해당 토지를 매입해 매장유산을 보소 관리하고, 발굴 결과 현지나 이전 보존조치가 지시된 경우에는 사업시행자가 모든 비용을 부담하도록 했다고 설명했는데요, 이번 매장문화재 보호법이 개정된다면 사업 시행자가 부담하던 성토나 유산 이전 등 소요비용에 대해 국가 지원이 가능해졌고, 보존에 따른 부담경감과 효과적인 유산보호가 가능해질 것이라 설명합니다.
+			<br>
+			<br>
+		또한 문화재청은 별도로 농어업인과 소규모 사업자에게 지원하는 발굴조사 비용도 지속적으로<br> 확대하겠다고 강조했습니다.</P>
+		<img src="">
+	</div>
+
+	</section>
+
+</body>
+
+<footer>
+	<p>우리집 땅에서 문화재가 나온다면© 2024 이소은</p>
+	<p>본 웹페이지는 서울과학기술대학교 시각디자인학과 웹퍼블리싱 수업의 일환으로 제작되었습니다</p>
+</footer>
+
+
+</html>
